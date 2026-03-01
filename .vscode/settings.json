@@ -1,0 +1,5 @@
+{
+  // disable YAML validation in the workspace to avoid spurious diagnostics from
+  // the YAML language server (workflow files use keys like "on" which confuse it)
+  "yaml.validate": false
+}
