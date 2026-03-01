@@ -15,6 +15,7 @@ def test_validate_good_plan():
 
 
 def test_validate_missing_required_fields():
-    bad = {"version": "1.0", "role_task_coverage_reference": {}}
+    # a scenario record missing required fields should cause validation error
+    bad = {"scenarios": [{}]}
     with pytest.raises(ValidationError):
         validate_plan(bad)

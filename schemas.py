@@ -3,7 +3,8 @@ from pydantic import BaseModel, Field
 
 
 class RoleRef(BaseModel):
-    role_name: Optional[str]
+    # role_name is optional and defaults to None when omitted
+    role_name: Optional[str] = None
     tasks_used_in_simulation: List[str] = Field(default_factory=list)
 
 
@@ -31,8 +32,9 @@ class Scenario(BaseModel):
 
 
 class PlanData(BaseModel):
-    version: Optional[str]
-    organization: Optional[str]
+    # metadata fields are optional and default to None when not provided
+    version: Optional[str] = None
+    organization: Optional[str] = None
     role_task_coverage_reference: Dict[str, RoleRef] = Field(default_factory=dict)
     scenarios: List[Scenario] = Field(default_factory=list)
 
