@@ -50,9 +50,10 @@ def test_compute_scenario_coverage_and_portfolio():
     sim = run_simulation(plan_data)
     summary = sim["portfolio_summary"]
 
-    # With full coverage and modifiers 1.0 we expect 100% risk reduction
-    assert summary["average_risk_reduction_percent"] == 100.0
-    assert summary["average_coverage_percent"] == 100.0
+    # With full coverage and modifiers 1.0 we expect ~100% risk reduction
+    from pytest import approx
+    assert summary["average_risk_reduction_percent"] == approx(100.0)
+    assert summary["average_coverage_percent"] == approx(100.0)
 
 
 def test_compute_scenario_with_partial_and_invalid_tasks():
@@ -89,5 +90,6 @@ def test_compute_scenario_with_partial_and_invalid_tasks():
     # T2 is not in any role reference so it should not count as covered
     assert res["covered_tasks_count"] == 1
     assert "T2" in res["uncovered_tasks"]
-    # coverage percent should be 50.0
-    assert res["coverage_percent"] == 50.0
+    # coverage percent should be approximately 50%
+    from pytest import approx
+    assert res["coverage_percent"] == approx(50.0)
