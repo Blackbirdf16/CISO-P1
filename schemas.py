@@ -42,4 +42,5 @@ def validate_plan(data: dict) -> PlanData:
 
     Raises `pydantic.ValidationError` on failure.
     """
-    return PlanData.parse_obj(data)
+    # model_validate is preferred in Pydantic v2, parse_obj is deprecated
+    return PlanData.model_validate(data)

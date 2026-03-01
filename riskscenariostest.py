@@ -323,7 +323,7 @@ if __name__ == "__main__":
 
         try:
             # Validate input schema early so errors are clearer
-            plan_data = validate_plan(raw).dict()
+            plan_data = validate_plan(raw).model_dump()
         except ValidationError as e:
             print("Input validation failed:")
             print(e)

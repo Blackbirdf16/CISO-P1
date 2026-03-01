@@ -1,42 +1,42 @@
-﻿Categories,Work Role,Work Role ID,OPM Code (Fed Use),"Salary (3 yrs, €/yr)",Duration (years)
-OG,Communications Security (COMSEC) Management,OG-WRL-001,723,55.000 €,2
-OG,Cybersecurity Policy and Planning,OG-WRL-002,752,52.000 €,2
-OG,Cybersecurity Workforce Management,OG-WRL-003,751,50.000 €,2
-OG,Cybersecurity Curriculum Development,OG-WRL-004,711,40.000 €,2
-OG,Cybersecurity Instruction,OG-WRL-005,712,38.000 €,2
-OG,Cybersecurity Legal Advice,OG-WRL-006,731,60.000 €,2
-OG,Executive Cybersecurity Leadership,OG-WRL-007,901,75.000 €,2
-OG,Privacy Compliance,OG-WRL-008,732,50.000 €,2
-OG,Product Support Management,OG-WRL-009,803,48.000 €,2
-OG,Program Management,OG-WRL-010,801,52.000 €,2
-OG,Secure Project Management,OG-WRL-011,802,52.000 €,2
-OG,Security Control Assessment,OG-WRL-012,612,48.000 €,2
-OG,Systems Authorization,OG-WRL-013,611,48.000 €,2
-OG,Systems Security Management,OG-WRL-014,722,58.000 €,2
-OG,Technology Portfolio Management,OG-WRL-015,804,55.000 €,2
-OG,Technology Program Auditing,OG-WRL-016,805,52.000 €,2
-DD,Cybersecurity Architecture,DD-WRL-001,652,78.000 €,2
-DD,Enterprise Architecture,DD-WRL-002,651,70.000 €,2
-DD,Secure Software Development,DD-WRL-003,621,48.000 €,2
-DD,Secure Systems Development,DD-WRL-004,631 and 632,50.000 €,2
-DD,Software Security Assessment,DD-WRL-005,622,52.000 €,2
-DD,Systems Requirements Planning,DD-WRL-006,641,52.000 €,2
-DD,Systems Testing and Evaluation,DD-WRL-007,671,48.000 €,2
-DD,Technology Research and Development,DD-WRL-008,661,48.000 €,2
-DD,Operational Technology (OT) Cybersecurity Engineering,DD-WRL-009,TBD,58.000 €,2
-IO,Data Analysis,IO-WRL-001,422,32.000 €,2
-IO,Database Administration,IO-WRL-002,421,42.000 €,2
-IO,Knowledge Management,IO-WRL-003,431,32.000 €,2
-IO,Network Operations,IO-WRL-004,441,38.000 €,2
-IO,Systems Administration,IO-WRL-005,451,38.000 €,2
-IO,Systems Security Analysis,IO-WRL-006,461,42.000 €,2
-IO,Technical Support,IO-WRL-007,411,25.000 €,2
-PD,Defensive Cybersecurity,PD-WRL-001,511,32.000 €,2
-PD,Digital Forensics,PD-WRL-002,212,45.000 €,2
-PD,Incident Response,PD-WRL-003,531,44.000 €,2
-PD,Infrastructure Support,PD-WRL-004,521,40.000 €,2
-PD,Insider Threat Analysis,PD-WRL-005,TBD,48.000 €,2
-PD,Threat Analysis,PD-WRL-006,141,45.000 €,2
-PD,Vulnerability Analysis,PD-WRL-007,541,44.000 €,2
-IN,Cybercrime Investigation,IN-WRL-001,221,38.000 €,2
-IN,Digital Evidence Analysis,IN-WRL-002,211,40.000 €,2
+﻿Categories;Work Role;Work Role ID;OPM Code (Fed Use);Salary (3 yrs, €/yr);Duration (years)
+OG;Communications Security (COMSEC) Management;OG-WRL-001;723;55.000 €;2
+OG;Cybersecurity Policy and Planning;OG-WRL-002;752;52.000 €;2
+OG;Cybersecurity Workforce Management;OG-WRL-003;751;50.000 €;2
+OG;Cybersecurity Curriculum Development;OG-WRL-004;711;40.000 €;2
+OG;Cybersecurity Instruction;OG-WRL-005;712;38.000 €;2
+OG;Cybersecurity Legal Advice;OG-WRL-006;731;60.000 €;2
+OG;Executive Cybersecurity Leadership;OG-WRL-007;901;75.000 €;2
+OG;Privacy Compliance;OG-WRL-008;732;50.000 €;2
+OG;Product Support Management;OG-WRL-009;803;48.000 €;2
+OG;Program Management;OG-WRL-010;801;52.000 €;2
+OG;Secure Project Management;OG-WRL-011;802;52.000 €;2
+OG;Security Control Assessment;OG-WRL-012;612;48.000 €;2
+OG;Systems Authorization;OG-WRL-013;611;48.000 €;2
+OG;Systems Security Management;OG-WRL-014;722;58.000 €;2
+OG;Technology Portfolio Management;OG-WRL-015;804;55.000 €;2
+OG;Technology Program Auditing;OG-WRL-016;805;52.000 €;2
+DD;Cybersecurity Architecture;DD-WRL-001;652;78.000 €;2
+DD;Enterprise Architecture;DD-WRL-002;651;70.000 €;2
+DD;Secure Software Development;DD-WRL-003;621;48.000 €;2
+DD;Secure Systems Development;DD-WRL-004;631 and 632;50.000 €;2
+DD;Software Security Assessment;DD-WRL-005;622;52.000 €;2
+DD;Systems Requirements Planning;DD-WRL-006;641;52.000 €;2
+DD;Systems Testing and Evaluation;DD-WRL-007;671;48.000 €;2
+DD;Technology Research and Development;DD-WRL-008;661;48.000 €;2
+DD;Operational Technology (OT) Cybersecurity Engineering;DD-WRL-009;TBD;58.000 €;2
+IO;Data Analysis;IO-WRL-001;422;32.000 €;2
+IO;Database Administration;IO-WRL-002;421;42.000 €;2
+IO;Knowledge Management;IO-WRL-003;431;32.000 €;2
+IO;Network Operations;IO-WRL-004;441;38.000 €;2
+IO;Systems Administration;IO-WRL-005;451;38.000 €;2
+IO;Systems Security Analysis;IO-WRL-006;461;42.000 €;2
+IO;Technical Support;IO-WRL-007;411;25.000 €;2
+PD;Defensive Cybersecurity;PD-WRL-001;511;32.000 €;2
+PD;Digital Forensics;PD-WRL-002;212;45.000 €;2
+PD;Incident Response;PD-WRL-003;531;44.000 €;2
+PD;Infrastructure Support;PD-WRL-004;521;40.000 €;2
+PD;Insider Threat Analysis;PD-WRL-005;TBD;48.000 €;2
+PD;Threat Analysis;PD-WRL-006;141;45.000 €;2
+PD;Vulnerability Analysis;PD-WRL-007;541;44.000 €;2
+IN;Cybercrime Investigation;IN-WRL-001;221;38.000 €;2
+IN;Digital Evidence Analysis;IN-WRL-002;211;40.000 €;2

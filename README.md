@@ -60,12 +60,7 @@ Notes & caveats
 - The script currently expects `risk_scenarios.json` in the working directory; a
   CLI flag would allow different paths and safer automation.
 
-If you'd like, I can:
-- add a `requirements.txt` and a simple GitHub Actions CI workflow (pytest + lint),
-- add unit tests for the scoring functions and a small runner that validates
-  `risk_scenarios.json` against a schema, or
-- implement a CLI for `riskscenariostest.py` so the input file is configurable.
-
 Contact / author
 Project prepared for the CISO practical assignment. Open an issue or ask here
 to continue with the next improvements.
+
