@@ -1,3 +1,4 @@
+import argparse
 import json
 from typing import Dict, List, Set, Any
 
@@ -306,16 +307,35 @@ def run_simulation(plan_data: Dict[str, Any]) -> Dict[str, Any]:
 # Example usage
 # -----------------------------------------------------------------------------
 if __name__ == "__main__":
-    with open("risk_scenarios.json", "r", encoding="utf-8") as f:
-        plan_data = json.load(f)
+    def main() -> None:
+        parser = argparse.ArgumentParser(description="Run risk scenario simulation")
+        parser.add_argument("-i", "--input", default="risk_scenarios.json",
+                            help="Path to the risk scenarios JSON file")
+        parser.add_argument("-o", "--output", help="Optional output JSON file to save results")
+        parser.add_argument("-q", "--quiet", action="store_true", help="Suppress console output")
 
-    simulation = run_simulation(plan_data)
+        args = parser.parse_args()
 
-    results = simulation["results"]
-    ranked_results = simulation["ranked_results"]
-    summary = simulation["portfolio_summary"]
+        with open(args.input, "r", encoding="utf-8") as f:
+            plan_data = json.load(f)
 
-    print_score_report(results)
-    print_ranking_table(ranked_results)
-    print_portfolio_summary(summary)
-    print_presentation_talking_points(summary)
+        simulation = run_simulation(plan_data)
+
+        if args.output:
+            try:
+                with open(args.output, "w", encoding="utf-8") as outf:
+                    json.dump(simulation, outf, indent=2)
+            except Exception as e:
+                print(f"Warning: could not write output file: {e}")
+
+        if not args.quiet:
+            results = simulation["results"]
+            ranked_results = simulation["ranked_results"]
+            summary = simulation["portfolio_summary"]
+
+            print_score_report(results)
+            print_ranking_table(ranked_results)
+            print_portfolio_summary(summary)
+            print_presentation_talking_points(summary)
+
+    main()
