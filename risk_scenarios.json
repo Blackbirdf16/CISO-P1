@@ -1,0 +1,615 @@
+{
+  "version": "1.0",
+  "organization": "MedData Solutions",
+  "case_profile": {
+    "industry": "Healthcare SaaS",
+    "environment": "Predominantly cloud-first with hybrid administrative endpoints",
+    "strategic_horizon": "2026-2028",
+    "budget_cap_eur": 250000
+  },
+  "plan_context": {
+    "new_hires": [
+      {
+        "role_id": "DD-WRL-001",
+        "role_name": "Cybersecurity Architecture",
+        "type": "hire"
+      }
+    ],
+    "existing_roles": [
+      {
+        "role_id": "PD-WRL-001",
+        "role_name": "Defensive Cybersecurity",
+        "type": "internal"
+      },
+      {
+        "role_id": "IO-WRL-002",
+        "role_name": "Database Administration",
+        "type": "internal"
+      },
+      {
+        "role_id": "IO-WRL-005",
+        "role_name": "Systems Administration",
+        "type": "internal"
+      }
+    ],
+    "upskilled_target_roles": [
+      {
+        "base_role_id": "PD-WRL-001",
+        "target_roles": ["PD-WRL-003", "PD-WRL-006"]
+      },
+      {
+        "base_role_id": "IO-WRL-002",
+        "target_roles": ["OG-WRL-008", "PD-WRL-007"]
+      },
+      {
+        "base_role_id": "IO-WRL-005",
+        "target_roles": ["PD-WRL-004", "OG-WRL-012"]
+      },
+      {
+        "base_role_id": "DD-WRL-001",
+        "target_roles": ["OG-WRL-002", "OG-WRL-016"]
+      }
+    ],
+    "external_services": [
+      {
+        "service_id": "EXT-DFIR-01",
+        "service_name": "External DFIR and Malware Analysis",
+        "type": "outsourced"
+      },
+      {
+        "service_id": "EXT-AUDIT-01",
+        "service_name": "External Regulatory Audit",
+        "type": "outsourced"
+      }
+    ],
+    "tooling": [
+      "EDR",
+      "CSPM",
+      "SIEM_Optimization",
+      "Immutable_Backups",
+      "MFA"
+    ]
+  },
+  "scoring_model": {
+    "coverage_method": "weighted_task_coverage",
+    "risk_reduction_method": "weighted_task_coverage x control_modifier x execution_factor",
+    "formulas": {
+      "task_coverage_percent": "(covered_weight / total_required_weight) * 100",
+      "risk_reduction_percent": "min(100, task_coverage_percent * control_modifier * execution_factor)"
+    },
+    "focus_profiles": {
+      "soc": {
+        "tasks": 1.0,
+        "skills": 0.6,
+        "knowledge": 0.3
+      },
+      "grc": {
+        "tasks": 0.4,
+        "skills": 0.8,
+        "knowledge": 1.0
+      }
+    },
+    "coverage_thresholds": {
+      "minimal": 50,
+      "meaningful": 70,
+      "strong": 85
+    }
+  },
+  "role_task_coverage_reference": {
+    "DD-WRL-001": {
+      "role_name": "Cybersecurity Architecture",
+      "tasks_used_in_simulation": [
+        "T1096",
+        "T1124",
+        "T1126",
+        "T1263",
+        "T1264",
+        "T1265",
+        "T1294"
+      ]
+    },
+    "PD-WRL-001": {
+      "role_name": "Defensive Cybersecurity",
+      "tasks_used_in_simulation": [
+        "T1084",
+        "T1119",
+        "T1266",
+        "T1347",
+        "T1350",
+        "T1388",
+        "T1389"
+      ]
+    },
+    "PD-WRL-007": {
+      "role_name": "Vulnerability Analysis",
+      "tasks_used_in_simulation": [
+        "T1069",
+        "T1070",
+        "T1079",
+        "T1118",
+        "T1119",
+        "T1279",
+        "T1619",
+        "T1620"
+      ]
+    },
+    "OG-WRL-002": {
+      "role_name": "Cybersecurity Policy and Planning",
+      "tasks_used_in_simulation": [
+        "T1306",
+        "T1357",
+        "T1358",
+        "T1394",
+        "T1395",
+        "T1396",
+        "T1492",
+        "T1543",
+        "T1605"
+      ]
+    },
+    "EXT-DFIR-01": {
+      "role_name": "External DFIR and Malware Analysis",
+      "tasks_used_in_simulation": [
+        "T1118",
+        "T1388",
+        "T1389"
+      ]
+    },
+    "EXT-AUDIT-01": {
+      "role_name": "External Regulatory Audit",
+      "tasks_used_in_simulation": [
+        "T1306",
+        "T1357",
+        "T1358",
+        "T1394",
+        "T1395",
+        "T1396"
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "RS-001",
+      "name": "Ransomware Outbreak",
+      "description": "A phishing-led or exposed-service compromise results in endpoint infection, lateral movement, privilege abuse, and encryption of critical healthcare systems and patient-related data.",
+      "likelihood": 4,
+      "impact": 5,
+      "risk_score": 20,
+      "assets": [
+        "EHR database",
+        "Windows endpoints",
+        "Email platform",
+        "File shares",
+        "Identity platform",
+        "Backup repositories"
+      ],
+      "environment_tags": [
+        "hybrid",
+        "cloud",
+        "endpoint",
+        "identity"
+      ],
+      "required_tasks": [
+        {
+          "task_id": "T1084",
+          "weight": 9,
+          "rationale": "Early anomaly detection during initial compromise and lateral movement."
+        },
+        {
+          "task_id": "T1118",
+          "weight": 6,
+          "rationale": "Identify exploitable weaknesses used for initial access or escalation."
+        },
+        {
+          "task_id": "T1119",
+          "weight": 7,
+          "rationale": "Recommend remediation to close exploited weaknesses."
+        },
+        {
+          "task_id": "T1266",
+          "weight": 8,
+          "rationale": "Define containment and near-term risk mitigation actions."
+        },
+        {
+          "task_id": "T1347",
+          "weight": 10,
+          "rationale": "Detect active attacks and intrusion behavior."
+        },
+        {
+          "task_id": "T1350",
+          "weight": 9,
+          "rationale": "Continuous monitoring is required to reduce attacker dwell time."
+        },
+        {
+          "task_id": "T1388",
+          "weight": 8,
+          "rationale": "Isolate malware rapidly to stop spread."
+        },
+        {
+          "task_id": "T1389",
+          "weight": 8,
+          "rationale": "Remove malware and support eradication."
+        },
+        {
+          "task_id": "T1264",
+          "weight": 7,
+          "rationale": "Identify architectural gaps that enabled propagation."
+        },
+        {
+          "task_id": "T1265",
+          "weight": 7,
+          "rationale": "Drive architectural risk treatment after the incident."
+        },
+        {
+          "task_id": "T1124",
+          "weight": 6,
+          "rationale": "Restore essential capabilities after catastrophic disruption."
+        },
+        {
+          "task_id": "T1126",
+          "weight": 6,
+          "rationale": "Define disaster recovery and continuity requirements."
+        },
+        {
+          "task_id": "T1306",
+          "weight": 5,
+          "rationale": "Audit response execution and capture lessons learned."
+        }
+      ],
+      "success_criteria": {
+        "mttd_minutes": 30,
+        "containment_minutes": 120,
+        "rto_hours": 8,
+        "rpo_hours": 4
+      },
+      "mitigations": [
+        {
+          "control": "EDR",
+          "mapped_tasks": ["T1084", "T1347", "T1350", "T1388", "T1389"]
+        },
+        {
+          "control": "SIEM_Optimization",
+          "mapped_tasks": ["T1084", "T1347", "T1350"]
+        },
+        {
+          "control": "Immutable_Backups",
+          "mapped_tasks": ["T1124", "T1126"]
+        },
+        {
+          "control": "MFA",
+          "mapped_tasks": ["T1118", "T1266"]
+        },
+        {
+          "control": "Network_Segmentation",
+          "mapped_tasks": ["T1264", "T1265"]
+        }
+      ],
+      "coverage_evaluation": {
+        "covered_by_roles": [
+          {
+            "entity_id": "PD-WRL-001",
+            "covers_tasks": ["T1084", "T1119", "T1266", "T1347", "T1350", "T1388", "T1389"]
+          },
+          {
+            "entity_id": "PD-WRL-007",
+            "covers_tasks": ["T1118", "T1119"]
+          },
+          {
+            "entity_id": "DD-WRL-001",
+            "covers_tasks": ["T1264", "T1265", "T1124", "T1126"]
+          },
+          {
+            "entity_id": "OG-WRL-002",
+            "covers_tasks": ["T1306"]
+          },
+          {
+            "entity_id": "EXT-DFIR-01",
+            "covers_tasks": ["T1118", "T1388", "T1389"]
+          }
+        ],
+        "uncovered_tasks": [],
+        "total_required_weight": 96,
+        "covered_weight": 96,
+        "coverage_percent": 100.0,
+        "control_modifier": 0.95,
+        "execution_factor": 0.90,
+        "risk_reduction_percent": 85.5,
+        "narrative": "The plan fully covers the critical task set on paper, but real-world execution still depends on playbook maturity, backup testing discipline, and how quickly trained staff and the DFIR provider respond."
+      }
+    },
+    {
+      "id": "RS-002",
+      "name": "Cloud Misconfiguration and Data Leak",
+      "description": "A cloud storage, IAM, or exposed administrative configuration error leads to unauthorized exposure or exfiltration of personal and medical data.",
+      "likelihood": 4,
+      "impact": 5,
+      "risk_score": 20,
+      "assets": [
+        "Cloud storage",
+        "Patient records",
+        "Administrative dashboards",
+        "Identity and access policies",
+        "Database snapshots",
+        "Logs and audit evidence"
+      ],
+      "environment_tags": [
+        "cloud",
+        "iam",
+        "data",
+        "hybrid"
+      ],
+      "required_tasks": [
+        {
+          "task_id": "T1096",
+          "weight": 9,
+          "rationale": "Privacy impact assessment is core for PHI/PII exposure scenarios."
+        },
+        {
+          "task_id": "T1263",
+          "weight": 8,
+          "rationale": "Security reviews detect architectural and control weaknesses before and after change."
+        },
+        {
+          "task_id": "T1264",
+          "weight": 9,
+          "rationale": "Identify gaps in security architecture such as weak segmentation or exposed services."
+        },
+        {
+          "task_id": "T1265",
+          "weight": 9,
+          "rationale": "Risk treatment planning is needed to close structural weaknesses."
+        },
+        {
+          "task_id": "T1294",
+          "weight": 6,
+          "rationale": "Risk management framework guidance improves evidence and governance traceability."
+        },
+        {
+          "task_id": "T1079",
+          "weight": 7,
+          "rationale": "Develop risk profiles for vulnerable data stores and exposed cloud services."
+        },
+        {
+          "task_id": "T1118",
+          "weight": 7,
+          "rationale": "Identify technical vulnerabilities and weak configurations."
+        },
+        {
+          "task_id": "T1619",
+          "weight": 7,
+          "rationale": "Perform risk and vulnerability assessments on systems and networks."
+        },
+        {
+          "task_id": "T1620",
+          "weight": 6,
+          "rationale": "Recommend cost-effective security controls for reduction of exposure."
+        },
+        {
+          "task_id": "T1069",
+          "weight": 6,
+          "rationale": "Check regulatory compliance where privacy and cloud controls overlap."
+        },
+        {
+          "task_id": "T1357",
+          "weight": 8,
+          "rationale": "Determine whether cybersecurity requirements were actually implemented."
+        },
+        {
+          "task_id": "T1358",
+          "weight": 8,
+          "rationale": "Determine whether policies and procedures are effective in practice."
+        }
+      ],
+      "success_criteria": {
+        "exposed_asset_detection_minutes": 60,
+        "public_exposure_remediation_minutes": 120,
+        "regulatory_assessment_hours": 24,
+        "breach_scope_confirmation_hours": 8
+      },
+      "mitigations": [
+        {
+          "control": "CSPM",
+          "mapped_tasks": ["T1263", "T1264", "T1265", "T1118", "T1619"]
+        },
+        {
+          "control": "MFA",
+          "mapped_tasks": ["T1620", "T1357"]
+        },
+        {
+          "control": "Least_Privilege_IAM",
+          "mapped_tasks": ["T1096", "T1264", "T1265"]
+        },
+        {
+          "control": "SIEM_Optimization",
+          "mapped_tasks": ["T1357", "T1358"]
+        }
+      ],
+      "coverage_evaluation": {
+        "covered_by_roles": [
+          {
+            "entity_id": "DD-WRL-001",
+            "covers_tasks": ["T1096", "T1263", "T1264", "T1265", "T1294"]
+          },
+          {
+            "entity_id": "PD-WRL-007",
+            "covers_tasks": ["T1079", "T1118", "T1619", "T1620", "T1069"]
+          },
+          {
+            "entity_id": "OG-WRL-002",
+            "covers_tasks": ["T1357", "T1358"]
+          }
+        ],
+        "uncovered_tasks": [],
+        "total_required_weight": 90,
+        "covered_weight": 90,
+        "coverage_percent": 100.0,
+        "control_modifier": 0.90,
+        "execution_factor": 0.88,
+        "risk_reduction_percent": 79.2,
+        "narrative": "Task coverage is complete, but cloud data leaks are highly sensitive to operational drift, change velocity, and IAM hygiene. The largest weakness is not missing tasks; it is inconsistent execution over time."
+      }
+    },
+    {
+      "id": "RS-003",
+      "name": "Audit Failure and Regulatory Noncompliance",
+      "description": "The organization fails an external audit or regulatory review because controls are incomplete, undocumented, inconsistently validated, or not aligned with GDPR/NIS2 expectations.",
+      "likelihood": 3,
+      "impact": 5,
+      "risk_score": 15,
+      "assets": [
+        "Policies and procedures",
+        "Control evidence",
+        "Audit logs",
+        "Incident records",
+        "Compliance register",
+        "Board reporting"
+      ],
+      "environment_tags": [
+        "grc",
+        "hybrid",
+        "documentation",
+        "compliance"
+      ],
+      "required_tasks": [
+        {
+          "task_id": "T1306",
+          "weight": 8,
+          "rationale": "Program and project audits are central to this scenario."
+        },
+        {
+          "task_id": "T1357",
+          "weight": 9,
+          "rationale": "Validate that cybersecurity requirements were implemented."
+        },
+        {
+          "task_id": "T1358",
+          "weight": 9,
+          "rationale": "Validate policy and procedure effectiveness."
+        },
+        {
+          "task_id": "T1394",
+          "weight": 8,
+          "rationale": "Develop independent audit processes."
+        },
+        {
+          "task_id": "T1395",
+          "weight": 8,
+          "rationale": "Implement independent audit processes."
+        },
+        {
+          "task_id": "T1396",
+          "weight": 8,
+          "rationale": "Oversee independent audits."
+        },
+        {
+          "task_id": "T1492",
+          "weight": 7,
+          "rationale": "Integrate laws and regulations into policy."
+        },
+        {
+          "task_id": "T1543",
+          "weight": 7,
+          "rationale": "Develop cybersecurity policies and procedures."
+        },
+        {
+          "task_id": "T1605",
+          "weight": 6,
+          "rationale": "Advise management and staff on policy obligations."
+        },
+        {
+          "task_id": "T1069",
+          "weight": 6,
+          "rationale": "Evaluate policy regulatory compliance."
+        },
+        {
+          "task_id": "T1070",
+          "weight": 6,
+          "rationale": "Evaluate policy alignment with organizational directives."
+        },
+        {
+          "task_id": "T1279",
+          "weight": 5,
+          "rationale": "Prepare audit reports and defensible evidence."
+        },
+        {
+          "task_id": "T1263",
+          "weight": 7,
+          "rationale": "Security reviews connect governance with technical reality."
+        },
+        {
+          "task_id": "T1294",
+          "weight": 6,
+          "rationale": "Risk management documentation must be coherent and reviewable."
+        }
+      ],
+      "success_criteria": {
+        "critical_findings": 0,
+        "major_findings_max": 2,
+        "evidence_request_turnaround_hours": 24,
+        "remediation_plan_delivery_days": 10
+      },
+      "mitigations": [
+        {
+          "control": "External_Audit",
+          "mapped_tasks": ["T1306", "T1394", "T1395", "T1396"]
+        },
+        {
+          "control": "Policy_Governance_Program",
+          "mapped_tasks": ["T1492", "T1543", "T1605"]
+        },
+        {
+          "control": "Control_Testing_Cadence",
+          "mapped_tasks": ["T1357", "T1358", "T1263"]
+        },
+        {
+          "control": "Risk_Register_and_RMF_Documentation",
+          "mapped_tasks": ["T1294", "T1069", "T1070"]
+        }
+      ],
+      "coverage_evaluation": {
+        "covered_by_roles": [
+          {
+            "entity_id": "OG-WRL-002",
+            "covers_tasks": ["T1306", "T1357", "T1358", "T1394", "T1395", "T1396", "T1492", "T1543", "T1605"]
+          },
+          {
+            "entity_id": "PD-WRL-007",
+            "covers_tasks": ["T1069", "T1070", "T1279"]
+          },
+          {
+            "entity_id": "DD-WRL-001",
+            "covers_tasks": ["T1263", "T1294"]
+          },
+          {
+            "entity_id": "EXT-AUDIT-01",
+            "covers_tasks": ["T1306", "T1357", "T1358", "T1394", "T1395", "T1396"]
+          }
+        ],
+        "uncovered_tasks": [],
+        "total_required_weight": 100,
+        "covered_weight": 100,
+        "coverage_percent": 100.0,
+        "control_modifier": 1.05,
+        "execution_factor": 0.88,
+        "risk_reduction_percent": 92.4,
+        "narrative": "This is your strongest scenario because the workforce plan explicitly funds policy, audit, control validation, and external independent review. The remaining drag is documentation discipline and evidence freshness, not missing task ownership."
+      }
+    }
+  ],
+  "executive_summary": {
+    "best_mitigated_scenario": {
+      "scenario_id": "RS-003",
+      "risk_reduction_percent": 92.4
+    },
+    "most_operationally_fragile_scenario": {
+      "scenario_id": "RS-002",
+      "risk_reduction_percent": 79.2
+    },
+    "headline_messages": [
+      "The hiring plan fully covers the selected critical NICE task sets for the three modeled scenarios.",
+      "Residual risk remains because execution maturity, tooling discipline, and outsourced-response dependency reduce the practical effect of nominal task coverage.",
+      "Audit failure is the strongest scenario under this plan because governance, policy, and external validation are directly funded.",
+      "Cloud data leak remains the weakest of the three because cloud misconfiguration risk is driven by operational drift and fast-moving change, not just static task ownership."
+    ]
+  }
+}
