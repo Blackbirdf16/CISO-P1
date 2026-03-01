@@ -44,6 +44,15 @@ Missing / recommended next steps
 - Add CI (GitHub Actions) to run tests and linting automatically on push/PR.
 - Add a `LICENSE` and `CONTRIBUTING.md` for collaboration and reuse guidance.
 
+Implemented enhancements
+- Added CLI to `riskscenariostest.py` (`-i/--input`, `-o/--output`, `-q/--quiet`).
+- Added Pydantic validation for `risk_scenarios.json` via `schemas.py`.
+- Added `requirements.txt` (now includes `pytest` and `pydantic`).
+- Added unit tests (`tests/test_scoring.py`, `tests/test_validation.py`).
+- Added GitHub Actions CI workflow at `.github/workflows/ci.yml`.
+- Added `LICENSE` (MIT) and `CONTRIBUTING.md`.
+- The script can save simulation output as JSON using `-o`.
+
 Notes & caveats
 - Confirm that the committed `riskscenariostest.py` contains no placeholder
   comments or omitted sections (some copies may include placeholder markers). If

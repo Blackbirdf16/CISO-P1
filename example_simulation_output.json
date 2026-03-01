@@ -1,0 +1,491 @@
+{
+  "results": [
+    {
+      "scenario_id": "RS-001",
+      "scenario_name": "Ransomware Outbreak",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 13,
+      "covered_tasks_count": 13,
+      "total_required_weight": 96.0,
+      "covered_weight": 96.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 0.95,
+      "execution_factor": 0.9,
+      "risk_reduction_percent": 85.5,
+      "covered_tasks": [
+        "T1084",
+        "T1118",
+        "T1119",
+        "T1124",
+        "T1126",
+        "T1264",
+        "T1265",
+        "T1266",
+        "T1306",
+        "T1347",
+        "T1350",
+        "T1388",
+        "T1389"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "PD-WRL-001",
+          "valid_tasks_count": 7,
+          "valid_tasks": [
+            "T1084",
+            "T1119",
+            "T1266",
+            "T1347",
+            "T1350",
+            "T1388",
+            "T1389"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1118",
+            "T1119"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 4,
+          "valid_tasks": [
+            "T1124",
+            "T1126",
+            "T1264",
+            "T1265"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 1,
+          "valid_tasks": [
+            "T1306"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "EXT-DFIR-01",
+          "valid_tasks_count": 3,
+          "valid_tasks": [
+            "T1118",
+            "T1388",
+            "T1389"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 85.5% of the \"Ransomware Outbreak\" scenario by covering 13 of 13 critical NICE tasks (96.0 of 96.0 weighted points)."
+    },
+    {
+      "scenario_id": "RS-002",
+      "scenario_name": "Cloud Misconfiguration and Data Leak",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 12,
+      "covered_tasks_count": 12,
+      "total_required_weight": 90.0,
+      "covered_weight": 90.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 0.9,
+      "execution_factor": 0.88,
+      "risk_reduction_percent": 79.2,
+      "covered_tasks": [
+        "T1069",
+        "T1079",
+        "T1096",
+        "T1118",
+        "T1263",
+        "T1264",
+        "T1265",
+        "T1294",
+        "T1357",
+        "T1358",
+        "T1619",
+        "T1620"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 5,
+          "valid_tasks": [
+            "T1096",
+            "T1263",
+            "T1264",
+            "T1265",
+            "T1294"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 5,
+          "valid_tasks": [
+            "T1069",
+            "T1079",
+            "T1118",
+            "T1619",
+            "T1620"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1357",
+            "T1358"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 79.2% of the \"Cloud Misconfiguration and Data Leak\" scenario by covering 12 of 12 critical NICE tasks (90.0 of 90.0 weighted points)."
+    },
+    {
+      "scenario_id": "RS-003",
+      "scenario_name": "Audit Failure and Regulatory Noncompliance",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 14,
+      "covered_tasks_count": 14,
+      "total_required_weight": 100.0,
+      "covered_weight": 100.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 1.05,
+      "execution_factor": 0.88,
+      "risk_reduction_percent": 92.4,
+      "covered_tasks": [
+        "T1069",
+        "T1070",
+        "T1263",
+        "T1279",
+        "T1294",
+        "T1306",
+        "T1357",
+        "T1358",
+        "T1394",
+        "T1395",
+        "T1396",
+        "T1492",
+        "T1543",
+        "T1605"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 9,
+          "valid_tasks": [
+            "T1306",
+            "T1357",
+            "T1358",
+            "T1394",
+            "T1395",
+            "T1396",
+            "T1492",
+            "T1543",
+            "T1605"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 3,
+          "valid_tasks": [
+            "T1069",
+            "T1070",
+            "T1279"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1263",
+            "T1294"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "EXT-AUDIT-01",
+          "valid_tasks_count": 6,
+          "valid_tasks": [
+            "T1306",
+            "T1357",
+            "T1358",
+            "T1394",
+            "T1395",
+            "T1396"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 92.4% of the \"Audit Failure and Regulatory Noncompliance\" scenario by covering 14 of 14 critical NICE tasks (100.0 of 100.0 weighted points)."
+    }
+  ],
+  "ranked_results": [
+    {
+      "scenario_id": "RS-003",
+      "scenario_name": "Audit Failure and Regulatory Noncompliance",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 14,
+      "covered_tasks_count": 14,
+      "total_required_weight": 100.0,
+      "covered_weight": 100.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 1.05,
+      "execution_factor": 0.88,
+      "risk_reduction_percent": 92.4,
+      "covered_tasks": [
+        "T1069",
+        "T1070",
+        "T1263",
+        "T1279",
+        "T1294",
+        "T1306",
+        "T1357",
+        "T1358",
+        "T1394",
+        "T1395",
+        "T1396",
+        "T1492",
+        "T1543",
+        "T1605"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 9,
+          "valid_tasks": [
+            "T1306",
+            "T1357",
+            "T1358",
+            "T1394",
+            "T1395",
+            "T1396",
+            "T1492",
+            "T1543",
+            "T1605"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 3,
+          "valid_tasks": [
+            "T1069",
+            "T1070",
+            "T1279"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1263",
+            "T1294"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "EXT-AUDIT-01",
+          "valid_tasks_count": 6,
+          "valid_tasks": [
+            "T1306",
+            "T1357",
+            "T1358",
+            "T1394",
+            "T1395",
+            "T1396"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 92.4% of the \"Audit Failure and Regulatory Noncompliance\" scenario by covering 14 of 14 critical NICE tasks (100.0 of 100.0 weighted points)."
+    },
+    {
+      "scenario_id": "RS-001",
+      "scenario_name": "Ransomware Outbreak",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 13,
+      "covered_tasks_count": 13,
+      "total_required_weight": 96.0,
+      "covered_weight": 96.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 0.95,
+      "execution_factor": 0.9,
+      "risk_reduction_percent": 85.5,
+      "covered_tasks": [
+        "T1084",
+        "T1118",
+        "T1119",
+        "T1124",
+        "T1126",
+        "T1264",
+        "T1265",
+        "T1266",
+        "T1306",
+        "T1347",
+        "T1350",
+        "T1388",
+        "T1389"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "PD-WRL-001",
+          "valid_tasks_count": 7,
+          "valid_tasks": [
+            "T1084",
+            "T1119",
+            "T1266",
+            "T1347",
+            "T1350",
+            "T1388",
+            "T1389"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1118",
+            "T1119"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 4,
+          "valid_tasks": [
+            "T1124",
+            "T1126",
+            "T1264",
+            "T1265"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 1,
+          "valid_tasks": [
+            "T1306"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "EXT-DFIR-01",
+          "valid_tasks_count": 3,
+          "valid_tasks": [
+            "T1118",
+            "T1388",
+            "T1389"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 85.5% of the \"Ransomware Outbreak\" scenario by covering 13 of 13 critical NICE tasks (96.0 of 96.0 weighted points)."
+    },
+    {
+      "scenario_id": "RS-002",
+      "scenario_name": "Cloud Misconfiguration and Data Leak",
+      "likelihood": null,
+      "impact": null,
+      "risk_score": null,
+      "total_required_tasks": 12,
+      "covered_tasks_count": 12,
+      "total_required_weight": 90.0,
+      "covered_weight": 90.0,
+      "coverage_percent": 100.0,
+      "control_modifier": 0.9,
+      "execution_factor": 0.88,
+      "risk_reduction_percent": 79.2,
+      "covered_tasks": [
+        "T1069",
+        "T1079",
+        "T1096",
+        "T1118",
+        "T1263",
+        "T1264",
+        "T1265",
+        "T1294",
+        "T1357",
+        "T1358",
+        "T1619",
+        "T1620"
+      ],
+      "uncovered_tasks": [],
+      "detailed_coverage": [
+        {
+          "entity_id": "DD-WRL-001",
+          "valid_tasks_count": 5,
+          "valid_tasks": [
+            "T1096",
+            "T1263",
+            "T1264",
+            "T1265",
+            "T1294"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "PD-WRL-007",
+          "valid_tasks_count": 5,
+          "valid_tasks": [
+            "T1069",
+            "T1079",
+            "T1118",
+            "T1619",
+            "T1620"
+          ],
+          "invalid_or_unmapped_tasks": []
+        },
+        {
+          "entity_id": "OG-WRL-002",
+          "valid_tasks_count": 2,
+          "valid_tasks": [
+            "T1357",
+            "T1358"
+          ],
+          "invalid_or_unmapped_tasks": []
+        }
+      ],
+      "executive_sentence": "By executing the proposed hiring and upskilling plan, the organization mitigates 79.2% of the \"Cloud Misconfiguration and Data Leak\" scenario by covering 12 of 12 critical NICE tasks (90.0 of 90.0 weighted points)."
+    }
+  ],
+  "portfolio_summary": {
+    "best_mitigated": {
+      "scenario_id": "RS-003",
+      "scenario_name": "Audit Failure and Regulatory Noncompliance",
+      "risk_reduction_percent": 92.4
+    },
+    "weakest": {
+      "scenario_id": "RS-002",
+      "scenario_name": "Cloud Misconfiguration and Data Leak",
+      "risk_reduction_percent": 79.2
+    },
+    "average_risk_reduction_percent": 85.7,
+    "average_coverage_percent": 100.0,
+    "scenario_count": 3
+  }
+}

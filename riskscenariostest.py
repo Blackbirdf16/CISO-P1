@@ -1,6 +1,8 @@
 import argparse
 import json
 from typing import Dict, List, Set, Any
+from pydantic import ValidationError
+from schemas import validate_plan
 
 
 def safe_round(value: float, digits: int = 1) -> float:
@@ -317,7 +319,15 @@ if __name__ == "__main__":
         args = parser.parse_args()
 
         with open(args.input, "r", encoding="utf-8") as f:
-            plan_data = json.load(f)
+            raw = json.load(f)
+
+        try:
+            # Validate input schema early so errors are clearer
+            plan_data = validate_plan(raw).dict()
+        except ValidationError as e:
+            print("Input validation failed:")
+            print(e)
+            return
 
         simulation = run_simulation(plan_data)
 
